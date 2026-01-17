@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="relative bg-white text-[#222222] font-[Poppins] mx-8 lg:mx-auto">
+    
+<!-- Desktop Nav -->
+
+    <nav class="hidden lg:flex justify-around items-center py-12">
+      <div class="text-4xl cursor-pointer text-hunter z-3 w-52 relative">Hunter Bell</div>
+        <div>
+          <ul class="flex justify-around space-x-10 text-[22px]">
+            <li class="hover:underline underline-offset-12 hover:text-hunter"><a href="#about">About</a></li>
+            <li class="hover:underline underline-offset-12 hover:text-hunter"><a href="#experience">Experience</a></li>
+            <li class="hover:underline underline-offset-12 hover:text-hunter"><a href="#projects">Projects</a></li>
+            <li class="hover:underline underline-offset-12 hover:text-hunter"><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Mobile Nav -->
+
+    <nav class="lg:hidden flex justify-between items-start my-10 h-[5vh] relative">
+      <div class=" text-hunter text-2xl -mt-0.5 cursor-pointer">Hunter Bell</div>
+        <div class="flex flex-col justify-end items-end">
+          <div 
+            id="hamburger" 
+            class="h-6 flex flex-col justify-between cursor-pointer" 
+            onclick="toggleMenu()">
+              <div class="h-0.5 w-8 bg-black"></div>
+              <div class="h-0.5 w-8 bg-black"></div>
+              <div class="h-0.5 w-8 bg-black"></div>
+          </div>
+          <div class="hidden-menu" id="dropdown">
+              <li class="my-4"><a href="#about" onclick="toggleMenu()">About</a></li>
+              <li class="my-4"><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+              <li class="my-4"><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+              <li class="my-4"><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+<!-- Hero Section -->
+
+    <section class="lg:flex-row lg:justify-center flex flex-col justify-start items-center h-[75vh] lg:h-[60vh] my-12">
+      <div class="fjc">
+        <img class="lg:w-3/4 w-1/2 py-8"
+          src="/images/profile.png" alt="profile picture"/>
+      </div>
+      <div class="lg:w-1/3 fjc w-full gap-1.5">
+        <p class="font-medium text-gray-700">Hello, I'm</p>
+        <h1 class="md:text-6xl text-4xl font-medium">Hunter Bell</h1>
+        <p class="font-light">Full Stack Developer</p>
+        <div class="w-full flex justify-center gap-3 mt-6">
+          
+          <button class="border-hunter border-2 h-14 w-1/3 rounded-full font-medium cursor-pointer" onclick="window.open('https://github.com/hunterbell')">Download CV</button>
+          
+          <button class="bg-hunter h-14 w-1/3 rounded-full text-white font-medium cursor-pointer" onclick="location.href='#contact'">Contact</button>
+        </div>
+        <div class="w-full flex gap-2 justify-center mt-2">
+          <img src="/images/linkedin.png" 
+            alt="linkedin logo" 
+            class="w-8 cursor-pointer" 
+            onclick="location.href='hhtps://www.linkedin.com/'"/>
+          <img src="/images/github.png" 
+            alt="github logo" 
+            class="w-8 cursor-pointer" 
+            onclick="location.href='https://github.com/'"/>
+        </div>
+
+        
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
